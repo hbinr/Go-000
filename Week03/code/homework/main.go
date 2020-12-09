@@ -37,6 +37,7 @@ func main() {
 		<-sigC
 		return s.Shutdown(context.TODO())
 	})
+
 	fmt.Println("test success......")
 	log.Println(eg.Wait())
 }

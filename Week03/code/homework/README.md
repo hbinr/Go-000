@@ -9,6 +9,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -23,7 +24,7 @@ func main() {
 	serverErr := make(chan error, 1)
 	sigC := make(chan os.Signal, 1)
 
-	s := http.Server{Addr: ":8088"}
+	s := http.Server{Addr: ":8080"}
 
 	eg.Go(func() error {
 		go func() {
@@ -44,6 +45,7 @@ func main() {
 		return s.Shutdown(context.TODO())
 	})
 
+	fmt.Println("test success......")
 	log.Println(eg.Wait())
 }
 ```
