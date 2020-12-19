@@ -23,7 +23,7 @@
 │   ├── pkg               # 业务使用的公共目录，与业务强耦合
 │   │   └── codec         # 业务码+错误码
 │   └── service           # 应用服务层，主要用来服务编排，调biz服务
-│       └── assemble      # 对象组合，dto<->do
+│       └── assemble      # 对象转换，dto<->do
 ├── pkg                   # 公共目录，与业务没有任何关系，可被第三方引用
 │   ├── cache             # 缓存初始化
 │   ├── conf              # 配置定义及初始化
@@ -35,7 +35,7 @@
 ```
 
 ## 运行
-**前置条件：**nacos-sever、myql-server、redis-server启动
+**前置条件：** nacos-sever、myql-server、redis-server启动
 ### 1.配偶环境变量
 
 启动前需配置环境变量：
