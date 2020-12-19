@@ -1,0 +1,16 @@
+// 先cd到proto下，然后 protoc -I ./ user_dto.proto  --dubbo_out=plugins=grpc+dubbo:../
+
+syntax = "proto3";
+
+package pb;
+
+// 用户DTO UserDTO
+message UserDTO{
+  int64 UseID    = 1; // 用户ID
+  string Passport = 2; // 用户账号
+  string Password = 3; // 用户密码
+  string Email = 4; // 用户密码
+  string Nickname = 5; // 用户昵称
+  int64  CreateTime = 6; // 创建时间
+  int64  UpdateTime = 7; // 更新时间
+}
